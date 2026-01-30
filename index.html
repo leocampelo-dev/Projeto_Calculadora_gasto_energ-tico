@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de gasto energético diário</title>
+    <link rel="stylesheet" href="styles.css/index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <header>
+        <h1>Calculadora de gasto energético diário</h1>
+        <p>Descubra quanto de calorias você gasta por dia!</p>
+        </header>
+
+        <section class="form-section">
+
+        <form>
+
+            <div class="input-infos">
+            <label for="weight">Peso (kg)</label>
+            <input 
+                type="number" 
+                id="weight" 
+                name="weight" 
+                placeholder="Ex: 70"
+                required
+            >
+            </div>
+
+            <div class="input-infos">
+            <label for="height">Altura (m)</label>
+            <input 
+                type="number" 
+                id="height" 
+                name="height" 
+                placeholder="Ex: 1.75"
+                step="0.01"
+                required
+            >
+            </div>
+
+            <button type="button">
+            Calcular meu metabolismo
+            </button>
+
+        </form>
+
+        </section>
+
+        <section class="result-section">
+        <h2>Resultado</h2>
+        <p id="result-text">
+            Preencha os dados para ver o resultado.
+        </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
