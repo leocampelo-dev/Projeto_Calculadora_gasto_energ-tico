@@ -1,65 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de gasto energético diário</title>
-    <link rel="stylesheet" href="styles.css/index.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de gasto energético diário</title>
+  <link rel="stylesheet" href="styles.css/index.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <main class="calculator">
+<main class="calculator">
 
-        <header>
-        <h1>Calculadora de gasto energético diário</h1>
-        <p>Descubra quanto de calorias você gasta por dia!</p>
-        </header>
+  <header>
+    <h1>Calculadora de gasto energético diário</h1>
+    <p>Descubra quantas calorias seu corpo precisa por dia</p>
+  </header>
 
-        <section class="form-section">
+  <section class="form-section">
+    <form>
 
-        <form>
+      <!-- SEXO -->
+      <div class="form-group">
+        <label>Sexo</label>
 
-            <div class="input-infos">
-            <label for="weight">Peso (kg)</label>
-            <input 
-                type="number" 
-                id="weight" 
-                name="weight" 
-                placeholder="Ex: 70"
-                required
-            >
-            </div>
+        <div class="button-group">
+          <button type="button" class="btn-option" data-sex="male">
+            Masculino
+          </button>
 
-            <div class="input-infos">
-            <label for="height">Altura (m)</label>
-            <input 
-                type="number" 
-                id="height" 
-                name="height" 
-                placeholder="Ex: 1.75"
-                step="0.01"
-                required
-            >
-            </div>
+          <button type="button" class="btn-option" data-sex="female">
+            Feminino
+          </button>
+        </div>
+      </div>
 
-            <button type="button">
-            Calcular meu metabolismo
-            </button>
+      <!-- PESO E IDADE -->
+      <div class="form-row">
+        <div class="input-infos">
+          <label for="weight">Peso (kg)</label>
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            placeholder="70"
+            required
+          >
+        </div>
 
-        </form>
+        <div class="input-infos">
+          <label for="age">Idade (anos)</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="25"
+            required
+          >
+        </div>
+      </div>
 
-        </section>
+      <!-- ALTURA -->
+      <div class="input-infos">
+        <label for="height">Altura (cm)</label>
+        <input
+          type="number"
+          id="height"
+          name="height"
+          placeholder="175"
+          required
+        >
+      </div>
 
-        <section class="result-section">
-        <h2>Resultado</h2>
-        <p id="result-text">
-            Preencha os dados para ver o resultado.
-        </p>
-        </section>
+      <!-- NÍVEL DE ATIVIDADE -->
+      <div class="form-group">
+        <label>Nível de Atividade Física</label>
 
-    </main>
+        <div class="activity-list">
+
+          <button type="button" class="activity-card" data-activity="1.2">
+            <strong>Sedentário</strong>
+            <span>Sem exercícios. Dia a dia majoritariamente sentado.</span>
+          </button>
+
+          <button type="button" class="activity-card" data-activity="1.375">
+            <strong>Levemente ativo</strong>
+            <span>Exercícios 1–3x/semana. Pouca movimentação diária.</span>
+          </button>
+
+          <button type="button" class="activity-card" data-activity="1.55">
+            <strong>Moderadamente ativo</strong>
+            <span>Treina 3–5x/semana. Rotina moderadamente ativa.</span>
+          </button>
+
+          <button type="button" class="activity-card" data-activity="1.725">
+            <strong>Muito ativo</strong>
+            <span>Treinos intensos 5–6x/semana.</span>
+          </button>
+
+          <button type="button" class="activity-card" data-activity="1.9">
+            <strong>Extremamente ativo</strong>
+            <span>Treina todos os dias ou 2x/dia.</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- BOTÃO PRINCIPAL -->
+      <button type="submit" class="btn-primary">
+        Calcular Gasto Energético
+      </button>
+
+    </form>
+  </section>
+
+  <!-- RESULTADO -->
+  <section class="result-section">
+    <h2>Resultado</h2>
+    <p id="result-text">
+      Preencha os dados para ver o resultado.
+    </p>
+  </section>
+
+</main>
 
 </body>
 </html>
+
