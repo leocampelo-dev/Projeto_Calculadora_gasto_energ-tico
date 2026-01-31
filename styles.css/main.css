@@ -1,0 +1,212 @@
+/* CONTAINER PRINCIPAL */
+.calculator {
+    background: rgba(20, 20, 40, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex: 1;
+    max-width: 700px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(79, 70, 229, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #9ca3af;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-section {
+    margin-bottom: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-label {
+    color: #d1d5db;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: 5px;
+}
+
+/* Inputs em linha (Peso e Idade) */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.input input {
+    background: rgba(30, 30, 50, 0.6);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%;
+}
+
+.input input::placeholder {
+    color: #6b7280;
+}
+
+.input input:focus {
+    border-color: #6366f1;
+    background: rgba(30, 30, 50, 0.8);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.input input:hover {
+    border-color: rgba(250, 240, 97, 0.2);
+}
+
+/* Remover setas dos inputs do tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+    /* CARD DE RESULTADO SEPARADO */
+.result-card {
+    background: rgba(20, 20, 40, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 32px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(79, 70, 229, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 20px;
+}
+
+.result-card h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-content {
+    background: rgba(30, 30, 50, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#result-text {
+    color: #9ca3af;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Efeito quando houver resultado */
+.result-card.has-result .result-content {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(79, 70, 229, 0.15) 100%);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.result-card.has-result #result-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estado de erro no card de resultado */
+.result-card.error-state .result-content {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.result-card.error-state #result-text {
+    color: #fca5a5;
+}
+
+
+/* Input com erro */
+.input input.error {
+    border-color: #ef4444 !important;
+    animation: shake 0.4s;
+}
+
+
+/* Animações */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transições suaves nos botões */
+.option-btn, .activity-btn {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Container responsivo */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    align-items: center; 
+    min-height: calc(100vh - 40px);
+}
+
