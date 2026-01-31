@@ -1,129 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de gasto energético diário</title>
-  <link rel="stylesheet" href="styles.css/index.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de gasto energético diário</title>
+    <link rel="stylesheet" href="styles.css/index.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="container">
+        <main class="calculator">
 
-<main class="calculator">
+            <header>
+            <h1>Calculadora de gasto energético diário</h1>
+            <p>Descubra quanto de calorias você gasta por dia!</p>
+            </header>
 
-  <header>
-    <h1>Calculadora de gasto energético diário</h1>
-    <p>Descubra quantas calorias seu corpo precisa por dia</p>
-  </header>
+            <section class="form-section">
 
-  <section class="form-section">
-    <form>
+            <form>
 
-      <!-- SEXO -->
-      <div class="form-group">
-        <label>Sexo</label>
+                <!-- Sexo -->
+                <div class="input">
+                    <label class="form-label">Sexo</label>
+                    <div class="button-group">
+                        <button type="button" class="option-btn" data-option="masculino">
+                            Masculino
+                        </button>
+                        <button type="button" class="option-btn" data-option="feminino">
+                            Feminino
+                        </button>
+                    </div>
+                </div>
 
-        <div class="button-group">
-          <button type="button" class="btn-option" data-sex="male">
-            Masculino
-          </button>
+                <!-- Peso e Idade na mesma linha -->
+                <div class="input-row">
+                    <div class="input">
+                        <label for="weight" class="form-label">Peso (kg)</label>
+                        <input 
+                            type="number" 
+                            id="weight" 
+                            name="weight" 
+                            placeholder="70.0"
+                            required
+                        >
+                    </div>
 
-          <button type="button" class="btn-option" data-sex="female">
-            Feminino
-          </button>
-        </div>
-      </div>
+                    <div class="input">
+                        <label for="age" class="form-label">Idade (anos)</label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="age" 
+                            placeholder="25"
+                            required
+                        >
+                    </div>
+                </div>
 
-      <!-- PESO E IDADE -->
-      <div class="form-row">
-        <div class="input-infos">
-          <label for="weight">Peso (kg)</label>
-          <input
-            type="number"
-            id="weight"
-            name="weight"
-            placeholder="70"
-            required
-          >
-        </div>
+                <!-- Altura -->
+                <div class="input">
+                    <label for="height" class="form-label">Altura (cm)</label>
+                    <input 
+                        type="number" 
+                        id="height" 
+                        name="height" 
+                        placeholder="175.0"
+                        required
+                    >
+                </div>
 
-        <div class="input-infos">
-          <label for="age">Idade (anos)</label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            placeholder="25"
-            required
-          >
-        </div>
-      </div>
+                <!-- Nível de Atividade Física -->
+                <div class="input">
+                    <label class="form-label">Nível de Atividade Física</label>
+                    <div class="activity-options">
+                        
+                        <button type="button" class="activity-btn" data-activity="sedentario">
+                            <span class="icon">🪑</span>
+                            <div class="activity-info">
+                                <strong>Sedentário</strong>
+                                <small>Sem exercícios. Dia a dia majoritariamente sentado.</small>
+                            </div>
+                        </button>
 
-      <!-- ALTURA -->
-      <div class="input-infos">
-        <label for="height">Altura (cm)</label>
-        <input
-          type="number"
-          id="height"
-          name="height"
-          placeholder="175"
-          required
-        >
-      </div>
+                        <button type="button" class="activity-btn" data-activity="leve">
+                            <span class="icon">🚶</span>
+                            <div class="activity-info">
+                                <strong>Levemente ativo</strong>
+                                <small>Exercícios 1-3x/semana. Pouca movimentação diária.</small>
+                            </div>
+                        </button>
 
-      <!-- NÍVEL DE ATIVIDADE -->
-      <div class="form-group">
-        <label>Nível de Atividade Física</label>
+                        <button type="button" class="activity-btn" data-activity="moderado">
+                            <span class="icon">🏃</span>
+                            <div class="activity-info">
+                                <strong>Moderadamente ativo</strong>
+                                <small>Treina 3-5x/semana. Rotina moderadamente ativa.</small>
+                            </div>
+                        </button>
 
-        <div class="activity-list">
+                        <button type="button" class="activity-btn" data-activity="muito">
+                            <span class="icon">🏋️</span>
+                            <div class="activity-info">
+                                <strong>Muito ativo</strong>
+                                <small>Treinos intensos +6x/semana + dia a dia bastante ativo.</small>
+                            </div>
+                        </button>
 
-          <button type="button" class="activity-card" data-activity="1.2">
-            <strong>Sedentário</strong>
-            <span>Sem exercícios. Dia a dia majoritariamente sentado.</span>
-          </button>
+                        <button type="button" class="activity-btn" data-activity="extremo">
+                            <span class="icon">🔥</span>
+                            <div class="activity-info">
+                                <strong>Extremamente ativo</strong>
+                                <small>Treina todos os dias ou 2x/dia. Alto esforço físico.</small>
+                            </div>
+                        </button>
 
-          <button type="button" class="activity-card" data-activity="1.375">
-            <strong>Levemente ativo</strong>
-            <span>Exercícios 1–3x/semana. Pouca movimentação diária.</span>
-          </button>
+                    </div>
+                </div>
 
-          <button type="button" class="activity-card" data-activity="1.55">
-            <strong>Moderadamente ativo</strong>
-            <span>Treina 3–5x/semana. Rotina moderadamente ativa.</span>
-          </button>
+                <button type="submit" class="submit-btn">
+                    📊 Calcular Gasto Energético
+                </button>
 
-          <button type="button" class="activity-card" data-activity="1.725">
-            <strong>Muito ativo</strong>
-            <span>Treinos intensos 5–6x/semana.</span>
-          </button>
+            </form>
 
-          <button type="button" class="activity-card" data-activity="1.9">
-            <strong>Extremamente ativo</strong>
-            <span>Treina todos os dias ou 2x/dia.</span>
-          </button>
+            </section>
+        </main>    
+            <!-- CARD DE RESULTADO SEPARADO -->
+            <aside class="result-card">
+                <h2>RESULTADO</h2>
+                <div class="result-content">
+                    <p id="result-text">
+                        Preencha os dados ao lado para ver seu <br> gasto energético diário estimado.
+                    </p>
+                </div>
+            </aside>
+            </div>
+    </div> 
 
-        </div>
-      </div>
-
-      <!-- BOTÃO PRINCIPAL -->
-      <button type="submit" class="btn-primary">
-        Calcular Gasto Energético
-      </button>
-
-    </form>
-  </section>
-
-  <!-- RESULTADO -->
-  <section class="result-section">
-    <h2>Resultado</h2>
-    <p id="result-text">
-      Preencha os dados para ver o resultado.
-    </p>
-  </section>
-
-</main>
-
+    <script src="script.js"></script>
 </body>
 </html>
 
