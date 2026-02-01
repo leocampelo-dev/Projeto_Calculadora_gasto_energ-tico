@@ -199,12 +199,15 @@ form.addEventListener("submit", event => {
   
   setTimeout(() => {
     resultText.innerHTML = `
-      Seu gasto energético diário estimado é de:
+      <span 
+      style="color: #000000; 
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+      Essa é a quantidade média de calorias <br> que seu corpo gasta por dia:</span>
       <br>
-      <strong style="color: #6366f1; font-size: 28px;">${totalCalories.toFixed(0)} kcal 🔥</strong>
+      <strong style="color: var(--main-color); font-size: 28px;">${totalCalories.toFixed(0)} kcal🔥</strong>
     `;
     
     // Animação de fade in
-    resultCard.style.animation = 'fadeIn 0.5s ease-out';
+    resultCard.style.animation = 'fadeIn 0.7s ease-out';
   }, 800);
 });
