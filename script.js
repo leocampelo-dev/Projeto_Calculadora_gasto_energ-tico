@@ -179,11 +179,11 @@ form.addEventListener("submit", event => {
   // FATOR DE ATIVIDADE
   // ===============================
   const activityFactor = {
-    sedentario: 1.2,
-    leve: 1.375,
-    moderado: 1.55,
-    muito: 1.725,
-    extremo: 1.9
+    sedentario: 1.15,
+    leve: 1.25,
+    moderado: 1.4,
+    muito: 1.6,
+    extremo: 1.8
   };
   
   const totalCalories = bmr * activityFactor[selectedActivity];
