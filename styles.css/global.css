@@ -23,6 +23,8 @@
 
   --radius-lg: 16px;
   --radius-md: 12px;
+
+  --color-laranja: rgba(247, 145, 29, 0.795);
 }
 
 /* BODY */
@@ -41,6 +43,10 @@ body {
     align-items: center;
     padding: 20px;
     position: relative;
+    background-image: url('../assets/Background_img/bg_gym.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Efeito de estrelas no fundo */

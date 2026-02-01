@@ -1,40 +1,40 @@
 /* CONTAINER PRINCIPAL */
 .calculator {
-    background: rgba(20, 20, 40, 0.85);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    border-radius: 15px;
+    padding: 20px;
     flex: 1;
     max-width: 700px;
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.5),
         0 0 100px rgba(79, 70, 229, 0.1);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: #6365f150 0px 30px 30px -20px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 header h1 {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 38px;
+    font-weight: 700;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 1px;
     letter-spacing: -0.5px;
 }
 
 header p {
-    color: #9ca3af;
+    color: #000000;
     font-size: 15px;
-    font-weight: 400;
-}
-
-.form-section {
-    margin-bottom: 32px;
+    font-weight: 500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 form {
@@ -44,10 +44,10 @@ form {
 }
 
 .form-label {
-    color: #d1d5db;
+    color: #3d3d3d;
     font-size: 15px;
     font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 5px;
     display: block;
     margin-left: 5px;
@@ -61,11 +61,11 @@ form {
 }
 
 .input input {
-    background: rgba(30, 30, 50, 0.6);
+    color: #F8F9FD;;
     border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 14px 16px;
-    color: #ffffff;
+    color: #383838;
     font-size: 16px;
     transition: all 0.3s ease;
     outline: none;
@@ -73,12 +73,11 @@ form {
 }
 
 .input input::placeholder {
-    color: #6b7280;
+    color: #6b72808a;
 }
 
 .input input:focus {
     border-color: #6366f1;
-    background: rgba(30, 30, 50, 0.8);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
@@ -97,7 +96,7 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-    /* CARD DE RESULTADO SEPARADO */
+/* CARD DE RESULTADO SEPARADO */
 .result-card {
     background: rgba(20, 20, 40, 0.85);
     backdrop-filter: blur(10px);
@@ -108,26 +107,36 @@ input[type="number"] {
     max-width: 500px;
     min-height: 300px;
     box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 100px rgba(79, 70, 229, 0.1);
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0px 100px rgba(79, 70, 229, 0.1);
     display: flex;
     flex-direction: column;
     position: sticky;
     top: 20px;
+
+
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 24px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: #6365f154 0px 30px 20px -20px;
 }
 
 .result-card h2 {
-    color: #ffffff;
+    color: #000000;
     font-size: 24px;
     font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .result-content {
-    background: rgba(30, 30, 50, 0.4);
-    border: 1.5px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 24px;
+    border: 1.5px solid rgba(0, 0, 0, 0.096);
+    border-radius: 20px;
     padding: 32px 24px;
     text-align: center;
     flex: 1;
@@ -209,4 +218,5 @@ input[type="number"] {
     align-items: center; 
     min-height: calc(100vh - 40px);
 }
+
 

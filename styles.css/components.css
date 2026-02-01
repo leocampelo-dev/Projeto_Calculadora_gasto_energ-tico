@@ -5,28 +5,38 @@
     gap: 12px;
 }
 
+/* BOTÃO SEXO */
 .option-btn {
-    background: rgba(30, 30, 50, 0.6);
-    border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 14px 16px;
-    color: #d1d5db;
+    padding: 14px 14px;
+    color: #3d3d3d62;
     font-size: 15px;
     font-weight: 500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.404) 0px 15px 10px -15px;
+    border: none;
     margin: 0;
+
+    background: white;
+    border: 2px solid transparent;
+    box-shadow: #7a7a7a52 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
 }
 
+/* BOTÃO SEXO AO PASSAR MOUSE*/
 .option-btn:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(30, 30, 50, 0.8);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transform: translateY(-2px);
 }
 
-.option-btn.active {
-    background: rgba(99, 102, 241, 0.15);
-    border-color: #6366f1;
-    color: #ffffff;
+/* BOTÃO ATIVO SEXO*/
+.option-btn.active { 
+    background: var(--color-laranja);
+    color: #F8F9FD;
+    border:#00000041 1px solid;
+    border-radius: 12px;
 }
 
 /* BOTÕES DE ATIVIDADE FÍSICA */
@@ -34,16 +44,18 @@
 .activity-options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .activity-btn {
-    background: rgba(30, 30, 50, 0.6);
+    background: #ffffff;
     border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 12px;
-    color: #d1d5db;
+    color: #ffffff;
     font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -54,8 +66,9 @@
 }
 
 .activity-btn .icon {
-    font-size: 24px;
-    min-width: 32px;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,29 +79,31 @@
     flex-direction: column;
     gap: 4px;
     flex: 1;
+    
 }
 
 .activity-btn strong {
-    color: #ffffff;
+    color: #030303;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .activity-btn small {
-    color: #9ca3af;
+    color: #000000;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.4;
 }
 
 .activity-btn:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(30, 30, 50, 0.8);
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--color-laranja);
 }
 
 .activity-btn.active {
-    background: rgba(99, 102, 241, 0.15);
-    border-color: #6366f1;
+    background: rgba(247, 145, 29, 0.795);
+    border-color: #00000041;
+    box-shadow: #00000042 0px 10px 10px -5px;
 }
 
 .activity-btn.active strong {
@@ -96,7 +111,7 @@
 }
 
 .activity-btn.active small {
-    color: #d1d5db;
+    color: #ffffff;
 }
 
 /* BOTÃO DE SUBMIT */
