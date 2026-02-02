@@ -83,9 +83,9 @@ function validateInput(input) {
     return false;
   }
   
-  if (id === 'weight' && (value < 20 || value > 300)) {
+  if (id === 'weight' && (value < 20 || value > 200)) {
     input.classList.add('error');
-    showError('⚠️ Peso deve estar entre 20 e 300 kg');
+    showError('⚠️ Peso deve estar entre 20 e 200 kg');
     return false;
   }
   
@@ -95,9 +95,9 @@ function validateInput(input) {
     return false;
   }
   
-  if (id === 'age' && (value < 10 || value > 120)) {
+  if (id === 'age' && (value < 10 || value > 90)) {
     input.classList.add('error');
-    showError('⚠️ Idade deve estar entre 10 e 120 anos');
+    showError('⚠️ Idade deve estar entre 10 e 90 anos');
     return false;
   }
   
